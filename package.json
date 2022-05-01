@@ -1,7 +1,7 @@
 {
-  "name": "ts-plugin-starter",
+  "name": "@damilaredev/axios-wrapper",
   "version": "0.0.0",
-  "description": "TS Plugin Starter",
+  "description": "Axios Wrapper",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -28,9 +28,13 @@
   "author": "Damilare Anjorin",
   "license": "MIT",
   "homepage": "https://github.com/damilaredevone/ts-plugin-starter#readme",
+  "peerDependencies": {
+    "axios": ">=0.24.0"
+  },
   "devDependencies": {
     "@damilaredev/tsconfig": "^1.5.1",
     "@types/node": "^17.0.30",
+    "axios": "^0.27.2",
     "bumpp": "^7.1.1",
     "tsup": "^5.12.6",
     "typescript": "^4.6.4"
