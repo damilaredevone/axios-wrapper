@@ -49,3 +49,15 @@ export const getUser = async () => {
  });
 };
 ```
+
+### Adding headers
+By using headers option, it adds extra headers in addition to the request default headers:
+
+```ts
+await $get({
+  url: `your-url`,
+  headers: {
+    Accept: 'application/json'
+  },
+ });
+```
