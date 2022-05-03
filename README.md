@@ -24,7 +24,11 @@ pnpm i axios @damilaredev/axios-wrapper
 ### Usage
 
 ```ts
+//ES6 or Typescript
 import { $post, $get } from '@damilaredev/vue-axios';
+
+// CommonJS
+const { $post, $get } = require('@damilaredev/vue-axios')
 
 export const saveUser = async () => {
  await $post({
