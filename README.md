@@ -28,15 +28,15 @@ pnpm i axios @damilaredev/axios-wrapper
 import { $post, $get } from '@damilaredev/vue-axios';
 
 // CommonJS
-const { $post, $get } = require('@damilaredev/vue-axios')
+const { $post, $get } = require('@damilaredev/vue-axios');
 
 export const saveUser = async () => {
  await $post({
   url: `your-url`,
   headers,
   data,
-  success: (response: AxiosResponse<T>) => console.log(response),
-  error: (error: AxiosError) => console.log(error),
+  onSuccess: (response: AxiosResponse<T>) => console.log(response),
+  onError: (error: AxiosError) => console.log(error),
  });
 };
 
@@ -44,20 +44,21 @@ export const getUser = async () => {
  await $get({
   url: `your-url`,
   headers,
-  success: (response: AxiosResponse) => console.log(response),
-  error: (error) => console.log(error),
+  onSuccess: (response: AxiosResponse) => console.log(response),
+  onError: (error) => console.log(error),
  });
 };
 ```
 
 ### Adding headers
+
 By using headers option, it adds extra headers in addition to the request default headers:
 
 ```ts
 await $get({
-  url: `your-url`,
-  headers: {
-    Accept: 'application/json'
-  },
- });
+ url: `your-url`,
+ headers: {
+  Accept: 'application/json',
+ },
+});
 ```
