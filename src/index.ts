@@ -7,6 +7,12 @@ export type AxiosConfig = AxiosRequestConfig & {
  error?: (
   response?: AxiosError,
  ) => Promise<any> | void | Record<string, unknown>;
+ onSuccess?: <T = any>(
+  response?: AxiosResponse<T>,
+ ) => Promise<any> | void | Record<string, unknown>;
+ onError?: (
+  response?: AxiosError,
+ ) => Promise<any> | void | Record<string, unknown>;
 };
 
 const $ajax = async <T = any>({
@@ -16,6 +22,8 @@ const $ajax = async <T = any>({
  headers = {},
  error,
  success,
+ onSuccess,
+ onError,
 }: AxiosConfig): Promise<
  AxiosResponse<T, any> | void | boolean | AxiosError
 > => {
@@ -26,16 +34,12 @@ const $ajax = async <T = any>({
   headers,
  })
   .then((response: AxiosResponse) => {
-   if (
-    response.data.success === true ||
-    response.data.status === true ||
-    response.data.data
-   ) {
-    success!(response);
-   }
+   success!(response);
+   typeof onSuccess === 'function' && onSuccess(response);
   })
   .catch((err: AxiosError) => {
    error!(err);
+   typeof onError === 'function' && onError(err);
   });
 };
 
