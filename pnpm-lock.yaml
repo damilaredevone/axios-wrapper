@@ -5,7 +5,7 @@ specifiers:
   '@types/node': 17.0.31
   axios: 0.27.2
   bumpp: 7.1.1
-  tsup: 5.12.8
+  tsup: 6.0.1
   typescript: 4.6.4
 
 devDependencies:
@@ -13,7 +13,7 @@ devDependencies:
   '@types/node': 17.0.31
   axios: 0.27.2
   bumpp: 7.1.1
-  tsup: 5.12.8_typescript@4.6.4
+  tsup: 6.0.1_typescript@4.6.4
   typescript: 4.6.4
 
 packages:
@@ -822,8 +822,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup/2.71.1:
-    resolution: {integrity: sha512-lMZk3XfUBGjrrZQpvPSoXcZSfKcJ2Bgn+Z0L1MoW2V8Wh7BVM+LOBJTPo16yul2MwL59cXedzW1ruq3rCjSRgw==}
+  /rollup/2.74.1:
+    resolution: {integrity: sha512-K2zW7kV8Voua5eGkbnBtWYfMIhYhT9Pel2uhBk2WO5eMee161nPze/XRfvEQPFYz7KgrCCnmh2Wy0AMFLGGmMA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -941,12 +941,19 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/5.12.8_typescript@4.6.4:
-    resolution: {integrity: sha512-fSBzUBtrnAQ+XKPfj1KcZ2Pl0EUlKBqpbTmRAs+2mL34fQlowrm6ccQgOYyMe9MMAcejMP6/7Rw3qKjx1lreZA==}
+  /tsup/6.0.1_typescript@4.6.4:
+    resolution: {integrity: sha512-2Pl1YkEEvzfg4aYgwUILaHV0wwZQKO7mNHMQChyzdCNlQqf11eug7gWk86XCb3CvRofCXBX87x73BTGjyS3cOQ==}
+    engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
+      '@swc/core': ^1
+      postcss: ^8.4.12
       typescript: ^4.1.0
     peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
       typescript:
         optional: true
     dependencies:
@@ -960,13 +967,12 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.4
       resolve-from: 5.0.0
-      rollup: 2.71.1
+      rollup: 2.74.1
       source-map: 0.8.0-beta.0
       sucrase: 3.21.0
       tree-kill: 1.2.2
       typescript: 4.6.4
     transitivePeerDependencies:
-      - postcss
       - supports-color
       - ts-node
     dev: true
