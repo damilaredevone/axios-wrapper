@@ -32,7 +32,7 @@
     "axios": ">=0.24.0"
   },
   "devDependencies": {
-    "@damilaredev/tsconfig": "1.5.1",
+    "@damilaredev/tsconfig": "1.5.2",
     "@types/node": "17.0.31",
     "axios": "0.27.2",
     "bumpp": "8.2.1",
