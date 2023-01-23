@@ -1,0 +1,13 @@
+semi: false
+singleQuote: true
+printWidth: 83
+# plugins:
+#   - "prettier-plugin-tailwindcss"
+overrides:
+  - files: ["*.yml"]
+    options:
+      singleQuote: false
+  - files: ["*.json"]
+    options:
+      singleQuote: false
+      quoteProps: "preserve"

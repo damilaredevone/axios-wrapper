@@ -25,29 +25,29 @@ pnpm i axios @damilaredev/axios-wrapper
 
 ```ts
 //ES6 or Typescript
-import { $post, $get } from '@damilaredev/vue-axios';
+import { $post, $get } from '@damilaredev/vue-axios'
 
 // CommonJS
-const { $post, $get } = require('@damilaredev/vue-axios');
+const { $post, $get } = require('@damilaredev/vue-axios')
 
 export const saveUser = async () => {
- await $post({
-  url: `your-url`,
-  headers,
-  data,
-  onSuccess: (response: AxiosResponse<T>) => console.log(response),
-  onError: (error: AxiosError) => console.log(error),
- });
-};
+  await $post({
+    url: `your-url`,
+    headers,
+    data,
+    onSuccess: (response: AxiosResponse<T>) => console.log(response),
+    onError: (error: AxiosError) => console.log(error),
+  })
+}
 
 export const getUser = async () => {
- await $get({
-  url: `your-url`,
-  headers,
-  onSuccess: (response: AxiosResponse) => console.log(response),
-  onError: (error) => console.log(error),
- });
-};
+  await $get({
+    url: `your-url`,
+    headers,
+    onSuccess: (response: AxiosResponse) => console.log(response),
+    onError: (error) => console.log(error),
+  })
+}
 ```
 
 ### Adding headers
@@ -56,9 +56,9 @@ By using headers option, it adds extra headers in addition to the request defaul
 
 ```ts
 await $get({
- url: `your-url`,
- headers: {
-  Accept: 'application/json',
- },
-});
+  url: `your-url`,
+  headers: {
+    Accept: 'application/json',
+  },
+})
 ```

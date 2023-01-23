@@ -1,33 +1,31 @@
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 
 export type AxiosConfig = AxiosRequestConfig & {
   success?: <T = any>(
     response?: AxiosResponse<T>
-  ) => Promise<any> | void | Record<string, unknown>;
-  error?: (
-    response?: AxiosError
-  ) => Promise<any> | void | Record<string, unknown>;
+  ) => Promise<any> | void | Record<string, unknown>
+  error?: (response?: AxiosError) => Promise<any> | void | Record<string, unknown>
   onSuccess?: <T = any>(
     response?: AxiosResponse<T>
-  ) => Promise<any> | void | Record<string, unknown>;
+  ) => Promise<any> | void | Record<string, unknown>
   onError?: (
     response?: AxiosError
-  ) => Promise<any> | void | Record<string, unknown>;
-};
+  ) => Promise<any> | void | Record<string, unknown>
+}
 
 export type PayloadRequest = Pick<
   AxiosConfig,
-  | "success"
-  | "error"
-  | "method"
-  | "url"
-  | "headers"
-  | "params"
-  | "onSuccess"
-  | "onError"
-  | "timeout"
-  | "data"
->;
+  | 'success'
+  | 'error'
+  | 'method'
+  | 'url'
+  | 'headers'
+  | 'params'
+  | 'onSuccess'
+  | 'onError'
+  | 'timeout'
+  | 'data'
+>
 
 const $request = async <T = any>({
   method,
@@ -50,46 +48,46 @@ const $request = async <T = any>({
     params,
   })
     .then((response: AxiosResponse) => {
-      onSuccess && typeof onSuccess === "function"
+      onSuccess && typeof onSuccess === 'function'
         ? onSuccess(response)
-        : success!(response);
+        : success!(response)
     })
     .catch((err: AxiosError) => {
-      onError && typeof onError === "function" ? onError(err) : error!(err);
-    });
-};
+      onError && typeof onError === 'function' ? onError(err) : error!(err)
+    })
+}
 
 export const $get = async (payload: PayloadRequest): Promise<void> => {
   await $request({
-    method: "GET",
+    method: 'GET',
     ...payload,
-  });
-};
+  })
+}
 
 export const $post = async (payload: PayloadRequest): Promise<void> => {
   await $request({
-    method: "POST",
+    method: 'POST',
     ...payload,
-  });
-};
+  })
+}
 
 export const $patch = async (payload: PayloadRequest): Promise<void> => {
   await $request({
-    method: "PATCH",
+    method: 'PATCH',
     ...payload,
-  });
-};
+  })
+}
 
 export const $delete = async (payload: PayloadRequest): Promise<any> => {
   await $request({
-    method: "DELETE",
+    method: 'DELETE',
     ...payload,
-  });
-};
+  })
+}
 
 export const $put = async (payload: PayloadRequest): Promise<void> => {
   await $request({
-    method: "PUT",
+    method: 'PUT',
     ...payload,
-  });
-};
+  })
+}
