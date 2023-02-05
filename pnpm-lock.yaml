@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@damilaredev/tsconfig': 1.5.2
-  '@types/node': 18.11.18
+  '@types/node': 18.11.19
   axios: 1.2.3
   bumpp: 8.2.1
   prettier: ^2.8.3
@@ -11,7 +11,7 @@ specifiers:
 
 devDependencies:
   '@damilaredev/tsconfig': 1.5.2
-  '@types/node': 18.11.18
+  '@types/node': 18.11.19
   axios: 1.2.3
   bumpp: 8.2.1
   prettier: 2.8.3
@@ -64,8 +64,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@types/node/18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node/18.11.19:
+    resolution: {integrity: sha512-YUgMWAQBWLObABqrvx8qKO1enAvBUdjZOAWQ5grBAkp5LQv45jBvYKZ3oFS9iKRCQyFjqw6iuEa1vmFqtxYLZw==}
     dev: true
 
   /any-promise/1.3.0:
