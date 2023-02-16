@@ -6,7 +6,7 @@ specifiers:
   axios: 1.2.3
   bumpp: 8.2.1
   prettier: ^2.8.3
-  tsup: 6.6.0
+  tsup: 6.6.3
   typescript: 4.9.5
 
 devDependencies:
@@ -15,7 +15,7 @@ devDependencies:
   axios: 1.2.3
   bumpp: 8.2.1
   prettier: 2.8.3
-  tsup: 6.6.0_typescript@4.9.5
+  tsup: 6.6.3_typescript@4.9.5
   typescript: 4.9.5
 
 packages:
@@ -915,9 +915,9 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/6.6.0_typescript@4.9.5:
-    resolution: {integrity: sha512-HxZE7Hj5yNxLFftCXdcJ+Jsax8dI4oKb0bt8fIvd1g/W0FZ46sU1pFBVo15WpOERFcEMH7Hykey/Q+hKO4s9RQ==}
-    engines: {node: '>=14'}
+  /tsup/6.6.3_typescript@4.9.5:
+    resolution: {integrity: sha512-OLx/jFllYlVeZQ7sCHBuRVEQBBa1tFbouoc/gbYakyipjVQdWy/iQOvmExUA/ewap9iQ7tbJf9pW0PgcEFfJcQ==}
+    engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
       '@swc/core': ^1
