@@ -5,7 +5,7 @@ specifiers:
   '@types/node': 18.13.0
   axios: 1.3.4
   bumpp: 9.0.0
-  prettier: ^2.8.3
+  prettier: ^3.0.0
   tsup: 6.6.3
   typescript: 4.9.5
 
@@ -14,7 +14,7 @@ devDependencies:
   '@types/node': 18.13.0
   axios: 1.3.4
   bumpp: 9.0.0
-  prettier: 2.8.3
+  prettier: 3.0.0
   tsup: 6.6.3_typescript@4.9.5
   typescript: 4.9.5
 
@@ -758,9 +758,9 @@ packages:
       yaml: 1.10.2
     dev: true
 
-  /prettier/2.8.3:
-    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
-    engines: {node: '>=10.13.0'}
+  /prettier/3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
